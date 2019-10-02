@@ -11,7 +11,5 @@ RUN npm install -g @angular/cli@8.0.0
 # add app
 COPY . /app
 
-# start app
-#CMD ng serve --host 0.0.0.0 --disableHostCheck --proxy-config proxy.conf.dev.json
-CMD ng serve --host 0.0.0.0 --proxy-config proxy.conf.dev.json
-EXPOSE 4200
+## create dist
+RUN ng build --prod
